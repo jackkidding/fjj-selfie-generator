@@ -5,6 +5,7 @@ const imageInput = document.getElementById("image-input")
 const overlayText = document.getElementById("overlay-text")
 const resultContainer = document.getElementById("result-container")
 const resultCanvas = document.getElementById("result-canvas")
+const customizeContainer = document.getElementById("customize-container")
 const scaleRange = document.getElementById("scale-range")
 const rotationRange = document.getElementById("rotation-range")
 const moveUpButton = document.getElementById("arrow-up")
@@ -77,16 +78,23 @@ async function updateImage() {
     resultContainer.style.display = "block"
     resultCanvas.width = finalImage.width
     resultCanvas.height = finalImage.height
+
     const ctx = resultCanvas.getContext("2d")
     ctx.drawImage(finalImage, 0, 0)
 
+
+    const customizeContainer = document.getElementById("customize-container")
+    customizeContainer.style.display = "block"
+
     // Update download button
-    // const downloadButton = document.getElementById("download-button")
-    // downloadButton.style.display = "block"
-    // finalImage.toBlob((blob) => {
-    //     const url = URL.createObjectURL(blob)
-    //     downloadButton.href = url
-    // })
+    const downloadButton = document.getElementById("download-button")
+    downloadButton.style.display = "block"
+    finalImage.toBlob((blob) => {
+        const url = URL.createObjectURL(blob)
+        downloadButton.href = url
+    })
+    // const url = finalImage.toDataURL("image/png")
+    // downloadButton.href = url
 }
 
 async function loadImage(file) {

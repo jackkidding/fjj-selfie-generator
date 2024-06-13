@@ -24,14 +24,16 @@
             </a>
         </div>
 
-        <label for="overlay-text" style="display: block; margin-bottom: 0.5rem;">ใส่ชื่อ</label>
-        <input type="text" id="overlay-text" placeholder="เคาะ space bar เพื่อปรับตำแหน่งชื่อได้" maxlength="46">
-        <label for="scale-range" style="display: block; margin-bottom: 0.5rem;">ซูม</label>
-        <input type="range" id="scale-range" min="0.1" max="3" step="0.01" value="1" style="margin-bottom: 1rem;">
-        <label for="rotation-range" style="display: block; margin-bottom: 0.5rem;">หมุน</label>
-        <input type="range" id="rotation-range" min="-180" max="180" step="1" value="0" style="margin-bottom: 1rem;">
+        <div id="customize-container" style="display: none;">
+            <label for="overlay-text" style="display: block; margin-bottom: 0.5rem;">ใส่ชื่อ</label>
+            <input type="text" id="overlay-text" placeholder="เคาะ space bar เพื่อปรับตำแหน่งชื่อได้" maxlength="46">
+            <label for="scale-range" style="display: block; margin-bottom: 0.5rem;">ซูม</label>
+            <input type="range" id="scale-range" min="0.1" max="3" step="0.01" value="1" style="margin-bottom: 1rem;">
+            <label for="rotation-range" style="display: block; margin-bottom: 0.5rem;">หมุน</label>
+            <input type="range" id="rotation-range" min="-180" max="180" step="1" value="0" style="margin-bottom: 1rem;">
+        </div>
         <div class="arrow-buttons">
-            <div id="arrow-buttons-container">
+            <div id="arrow-buttons-container" style="display: none;">
                 <div id="arrow-up-container">
                     <button id="arrow-up" class="arrow-button">&uarr;</button>
                 </div>

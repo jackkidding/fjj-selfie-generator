@@ -176,18 +176,18 @@ async function drawImageWithOverlay(image, text, scaleFactor = 1, rotation = 0) 
     ctx.drawImage(overlay, 0, 0, canvasWidth, canvasHeight)
 
     // Add text overlay
-    const fontSize = 100 // Increased font size
+    const fontSize = 140 // Increased font size
     // const curveRadius = 1000 // Adjusted curve radius for less curvature
     // const centerX = canvasWidth / 2
     // const centerY = canvasHeight / 2 - 300
     const textW = 900
-    const textX = 200
-    const textY = 1660
+    const textX = 180
+    const textY = 1666
 
     // const whiteSpaceWidth = 15
     // const lineHeight = 58
 
-    ctx.font = `bold ${fontSize}px 'DM Sans', sans-serif`
+    ctx.font = `bold ${fontSize}px 'blur','db-airy'`
     ctx.fillStyle = "#000000"
 
     // const lines = ['This person is ', text]

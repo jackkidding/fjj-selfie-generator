@@ -5,11 +5,6 @@
     box-sizing: border-box;
 }
 
-/* @font-face {
-    font-family: Blur;
-    src: url('/fonts/BlurWeb-Medium.ttf');
-} */
-
 @font-face {
     font-family: 'db-airy';
     src: url('/fonts/DBAiryStdMed.ttf');
@@ -47,6 +42,17 @@ h1 {
 
 button {
     font-family: 'db-airy';
+    font-size: 1rem;
+}
+
+input {
+    font-family: 'db-airy';
+    font-size: 1rem;
+}
+
+input::placeholder {
+    font-family: 'db-airy';
+    font-size: 1rem;
 }
 
 #upload-form {

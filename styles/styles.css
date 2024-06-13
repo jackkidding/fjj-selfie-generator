@@ -5,22 +5,48 @@
     box-sizing: border-box;
 }
 
+/* @font-face {
+    font-family: Blur;
+    src: url('/fonts/BlurWeb-Medium.ttf');
+} */
+
+@font-face {
+    font-family: 'db-airy';
+    src: url('/fonts/DBAiryStdMed.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'blur';
+    src: url('/fonts/BlurWeb-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'db-airy';
     background-color: #f0f0f0;
     color: #333;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 2rem;
+    font-size: 1.5rem;
 }
 
 h1 {
+    font-family: 'db-airy';
     font-size: 2rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #4a4a4a;
+}
+
+button {
+    font-family: 'db-airy';
 }
 
 #upload-form {

@@ -82,7 +82,6 @@ async function updateImage() {
     const ctx = resultCanvas.getContext("2d")
     ctx.drawImage(finalImage, 0, 0)
 
-
     const customizeContainer = document.getElementById("customize-container")
     customizeContainer.style.display = "block"
 
@@ -90,12 +89,24 @@ async function updateImage() {
     const downloadButton = document.getElementById("download-button")
     downloadButton.style.display = "block"
     finalImage.toBlob((blob) => {
-        const url = URL.createObjectURL(blob)
+        const url = window.URL.createObjectURL(blob)
         downloadButton.href = url
+        // downloadButton.target = '_blank'
     })
-    // const url = finalImage.toDataURL("image/png")
-    // downloadButton.href = url
+
 }
+
+// document.getElementById('download-button').onclick = function(event){
+//     var data = { x: 42, s: "hello, world", d: new Date() }
+//     var json = JSON.stringify(data),
+//     blob = new Blob([json], {type: "octet/stream"}),
+//     url = window.URL.createObjectURL(blob);
+//   	this.href = url;
+//     this.target = '_blank';
+//   	// target filename
+//     this.download = 'my-download.json';
+//     console.log("ying");
+// }
 
 async function loadImage(file) {
     return new Promise((resolve) => {
@@ -190,7 +201,7 @@ async function drawImageWithOverlay(image, text, scaleFactor = 1, rotation = 0) 
     // const centerY = canvasHeight / 2 - 300
     const textW = 900
     const textX = 180
-    const textY = 1666
+    const textY = 1670
 
     // const whiteSpaceWidth = 15
     // const lineHeight = 58

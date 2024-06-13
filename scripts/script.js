@@ -8,6 +8,7 @@ const resultCanvas = document.getElementById("result-canvas")
 const customizeContainer = document.getElementById("customize-container")
 const scaleRange = document.getElementById("scale-range")
 const rotationRange = document.getElementById("rotation-range")
+const arrowButtonsContainer = document.getElementById("arrow-buttons-container")
 const moveUpButton = document.getElementById("arrow-up")
 const moveDownButton = document.getElementById("arrow-down")
 const moveLeftButton = document.getElementById("arrow-left")
@@ -84,6 +85,12 @@ async function updateImage() {
 
     const customizeContainer = document.getElementById("customize-container")
     customizeContainer.style.display = "block"
+
+    const arrowButtonsContainer = document.getElementById("arrow-buttons-container")
+    arrowButtonsContainer.style.display = "block"
+
+    const buyTickets = document.getElementById("buy-tickets")
+    buyTickets.style.display = "block"
 
     // Update download button
     const downloadButton = document.getElementById("download-button")

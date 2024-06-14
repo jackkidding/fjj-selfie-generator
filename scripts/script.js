@@ -213,7 +213,7 @@ async function drawImageWithOverlay(image, text, scaleFactor = 1, rotation = 0) 
     // const whiteSpaceWidth = 15
     // const lineHeight = 58
 
-    ctx.font = `bold ${fontSize}px 'blur','db-airy'`
+    ctx.font = `normal ${fontSize}px 'blur','db-airy'`
     ctx.fillStyle = "#000000"
 
     // const lines = ['This person is ', text]
